@@ -1,0 +1,78 @@
+{
+  "name": "create_task",
+  "description": "function to call once per task, to create detailed actionable, atomic tasks with fantasy quest names from any message. Extrapolate information and potential advice to facilitate complition of the task",
+  "strict": true,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "title",
+      "description",
+      "due_date",
+      "assigner",
+      "priority",
+      "time_estimation_minutes",
+      "tags"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "The title of the task."
+      },
+      "description": {
+        "type": "string",
+        "description": "Detailed description of the task.",
+        "nullable": false
+      },
+      "due_date": {
+        "type": "string",
+        "description": "Optional due date in ISO 8601 format.",
+        "nullable": true
+      },
+      "assigner": {
+        "type": "object",
+        "description": "Optional contact information for the person who assigned the task to the user.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the assigner."
+          },
+          "email": {
+            "type": "string",
+            "description": "Email address of the assigner."
+          }
+        },
+        "required": [
+          "name",
+          "email"
+        ],
+        "nullable": true,
+        "additionalProperties": false
+      },
+      "priority": {
+        "type": "string",
+        "description": "Optional priority of the task.",
+        "enum": [
+          "Low",
+          "Medium",
+          "High",
+          "Critical"
+        ],
+        "nullable": true
+      },
+      "time_estimation_minutes": {
+        "type": "number",
+        "description": "Optional estimated time for task completion, duration in minutes.",
+        "nullable": true
+      },
+      "tags": {
+        "type": "array",
+        "description": "Optional list of tags associated with the task and project.",
+        "items": {
+          "type": "string"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  }
+}

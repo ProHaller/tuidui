@@ -3,28 +3,35 @@ use crate::task::Task;
 use chrono::{DateTime, TimeZone, Utc};
 use uuid::Uuid;
 
+// TODO: Add options
+#[derive(Debug, Clone)]
 pub struct User {
     id: Uuid,
-    name: String,
-    title: String,
-    birth_date: DateTime<Utc>,
-    birth_place: String,
-    age: i32,
-    email: String,
-    username: String,
-    profile_picture_url: Url,
+    contact: Contact,
+    birth_date: Option<DateTime<Utc>>,
+    birth_place: Option<String>,
+    age: Option<i32>,
+    username: Option<String>,
+    profile_picture_url: Option<Url>,
     preferences: Preferences,
-    completed_tasks: Vec<Task>,
+    completed_tasks: Option<Vec<Task>>,
     current_level: i32,
     xp_points: i32,
 }
 
-pub struct Contact {}
+#[derive(Debug, Clone)]
+pub struct Contact {
+    name: String,
+    title: String,
+    email: String,
+}
 
+#[derive(Debug, Clone)]
 struct Url {
     url: String,
 }
 
+#[derive(Debug, Clone)]
 struct Preferences {
     theme: String,
     notification_settings: NotificationSettings,
@@ -32,6 +39,7 @@ struct Preferences {
     time_format: String,
 }
 
+#[derive(Debug, Clone)]
 struct NotificationSettings {
     email_notifications: bool,
     push_notifications: bool,
