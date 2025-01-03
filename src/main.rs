@@ -1,36 +1,41 @@
+use anyhow::Error;
 use buffer::Buffer;
 #[allow(dead_code, unused)]
 use core::panic;
+use std::env;
 
 use async_openai::types::{CreateMessageRequest, CreateRunRequest, MessageRole};
 use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyEventKind};
 use dotenv::dotenv;
-use layout::{Alignment, Rect};
+use layout::{Alignment, Constraint, Direction, Flex, Layout, Margin, Rect};
 use ratatui::*;
 use serde_json::from_str;
-use sqlx::postgres::PgPoolOptions;
-use style::Stylize;
+// use sqlx::{postgres::PgPoolOptions, Connection, PgPool};
+use style::{Color, Style, Styled, Stylize};
 use symbols::border;
 use text::{Line, Text};
 use tuidui::{display::display_tasks, openai::*, save::load_tasks, task::*};
-use widgets::{
-    block::{Position, Title},
-    Block, Paragraph, Widget,
-};
+use widgets::{block::*, *};
 
 #[tokio::main]
 async fn main() -> Result<(), anyhow::Error> {
+    // Laod environment variables
+    dotenv().ok();
+
     let mut terminal = ratatui::init();
     terminal.clear()?;
     let app_result = App::default().run(&mut terminal);
 
-    // setup the postgreSQL db
-    let pool = PgPoolOptions::new()
-        .max_connections(5)
-        .connect("postgres://Haller@localhost/tuidui_db")
-        .await?;
     ratatui::restore();
-    test().await?;
+    println!("Terminal has been restored.");
+    // test().await?;
+    // setup the postgreSQL db
+    // let pool = PgPoolOptions::new()
+    //     .max_connections(5)
+    //     .connect(&env::var("DATABASE_URL").expect("DATABASE_URL must be set"))
+    //     .await?;
+    // let result = sqlx::query("SELECT 1 + 1 as sum").fetch_one(&pool).await?;
+    // println!("Sum: {:#?}", result);
     app_result
 }
 
@@ -73,8 +78,8 @@ impl App {
     fn handle_key_event(&mut self, key_event: KeyEvent) {
         match key_event.code {
             KeyCode::Char('q') => self.exit(),
-            KeyCode::Left => self.decrement_counter(),
-            KeyCode::Right => self.increment_counter(),
+            KeyCode::Left | KeyCode::Char('h') | KeyCode::Char('k') => self.decrement_counter(),
+            KeyCode::Right | KeyCode::Char('l') | KeyCode::Char('j') => self.increment_counter(),
             _ => {}
         }
     }
@@ -105,10 +110,47 @@ impl Widget for &App {
             self.counter.to_string().yellow(),
         ])]);
 
+        let layout = Layout::new(
+            Direction::Horizontal,
+            [
+                Constraint::Ratio(1, 4),
+                Constraint::Ratio(1, 4),
+                Constraint::Ratio(1, 4),
+            ],
+        )
+        .flex(Flex::SpaceAround)
+        .vertical_margin(3)
+        .split(Rect::new(area.x, area.y, area.width, area.height));
+
         Paragraph::new(counter_text)
             .centered()
             .block(block)
+            .centered()
             .render(area, buf);
+        Paragraph::new("foo")
+            .block(
+                Block::new()
+                    .title("foosh")
+                    .borders(Borders::ALL)
+                    .border_set(border::THICK),
+            )
+            .render(layout[0], buf);
+        Paragraph::new("bar")
+            .block(
+                Block::new()
+                    .title("barsh")
+                    .borders(Borders::ALL)
+                    .border_set(border::THICK),
+            )
+            .render(layout[1], buf);
+        Paragraph::new("barou")
+            .block(
+                Block::new()
+                    .title("baroush")
+                    .borders(Borders::ALL)
+                    .border_set(border::THICK),
+            )
+            .render(layout[2], buf);
     }
 }
 
@@ -120,9 +162,6 @@ pub struct App {
 
 async fn test() -> Result<(), anyhow::Error> {
     println!("Hello Work!");
-
-    // Laod environment variables
-    dotenv().ok();
 
     //Create a client for OpenAI
     let Ok(client) = initialize().await else {
@@ -196,7 +235,7 @@ async fn test() -> Result<(), anyhow::Error> {
     }
 
     // let cancel_run = cancel_run(&client, &run).await?;
-    let poll2 = poll_run(&client, &run).await?;
+    // let poll2 = poll_run(&client, &run).await?;
     // println!("poll2: {:#?}", poll2);
 
     let list = list_assistants(&client).await?;
@@ -206,6 +245,11 @@ async fn test() -> Result<(), anyhow::Error> {
     }
     Ok(())
 }
+
+// async fn db_create_task(task: &Task, pool: &PgPool) -> Result<(), Error> {
+//     // let query = "INSERT INTO tasks (name, description, ) VALUES ($1 $2)";
+//     unimplemented!()
+// }
 
 #[cfg(test)]
 mod tests {

@@ -1,163 +1,164 @@
 {
   "tasks": [
     {
-      "title": "The Gathering of the Council of Magical Creatures",
-      "description": "Attend a briefing to discuss the recent surge in unicorn poaching incidents and decide on the increase of protective wards in enchanted forests.",
-      "due_date": "2024-10-21",
+      "title": "Gather with the Council of Magical Creatures",
+      "description": "Attend a briefing with the Council of Magical Creatures to discuss the recent surge in unicorn poaching incidents and decide on increasing protective wards in enchanted forests.",
+      "due_date": "2025-01-01",
       "state": "Pending",
       "priority": "High",
-      "time_estimation_minutes": 120,
+      "time_estimation_minutes": 60,
       "tags": [
+        "unicorn poaching",
         "briefing",
-        "unicorns",
-        "protection"
+        "Council of Magical Creatures"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Alchemical Approval",
-      "description": "Approve the new regulations for potion-making licenses, focusing on the restriction of volatile ingredients in student potion classes based on Professor Morgana's recommendations.",
-      "due_date": "2024-10-21",
+      "title": "Sanction Potion-Making License Regulations",
+      "description": "Approve the new regulations for potion-making licenses, particularly concerning the restriction of volatile ingredients in student potions classes based on Professor Morgana's recommendations.",
+      "due_date": "2025-01-01",
       "state": "Pending",
-      "priority": "Medium",
-      "time_estimation_minutes": 60,
+      "priority": "High",
+      "time_estimation_minutes": 30,
       "tags": [
-        "education",
+        "Professor Morgana",
         "potion-making",
         "regulations"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Transport Tapestry",
-      "description": "Meet with the Department of Magical Transportation to finalize the approval for a new Floo Network expansion linking remote wizarding villages to major magical cities.",
-      "due_date": "2024-10-21",
+      "title": "Convene with the Magical Transportation Department",
+      "description": "Meet with the Department of Magical Transportation to finalize the approval of a new Floo Network expansion that connects remote wizarding villages to major magical cities.",
+      "due_date": "2025-01-01",
       "state": "Pending",
       "priority": "High",
-      "time_estimation_minutes": 90,
+      "time_estimation_minutes": 45,
       "tags": [
+        "Floo Network",
         "expansion",
-        "transportation",
-        "Floo Network"
+        "Department of Magical Transportation"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Shield of Protection",
-      "description": "Oversee enchantment upgrades for the Ministry’s Defense Wards due to reports of weakening in certain areas.",
-      "due_date": "2024-10-21",
+      "title": "Review Defense Ward Enchantment Upgrades",
+      "description": "Oversee the enchantment upgrades for the Ministry’s Defense Wards due to reports of weakening in certain areas and review them urgently.",
+      "due_date": "2025-01-01",
       "state": "Pending",
       "priority": "Critical",
-      "time_estimation_minutes": 120,
+      "time_estimation_minutes": 90,
       "tags": [
-        "defense",
         "urgency",
-        "enchantments"
+        "Defense Wards",
+        "enchantment upgrades"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Scroll of Enlightenment",
-      "description": "Review and sign off on the Magical Education Reform Bill, ensuring non-traditional magic forms are included in the curriculum.",
-      "due_date": "2024-10-21",
+      "title": "Ratify the Magical Education Reform Bill",
+      "description": "Review and sign off on the Magical Education Reform Bill to include non-traditional magic forms like Wandless Casting and Potionless Healing into the curriculum.",
+      "due_date": "2025-01-01",
       "state": "Pending",
-      "priority": "High",
-      "time_estimation_minutes": 90,
+      "priority": "Medium",
+      "time_estimation_minutes": 60,
       "tags": [
-        "reform",
-        "education",
+        "Wandless Casting",
+        "Magical Education Reform Bill",
+        "Potionless Healing",
         "curriculum"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Council of Defenders",
-      "description": "Hold a closed-door session with the Auror Command to discuss the threat from rogue magical factions and coordinate a response plan.",
-      "due_date": "2024-10-21",
-      "state": "Pending",
-      "priority": "Critical",
-      "time_estimation_minutes": 120,
-      "tags": [
-        "security",
-        "Auror Command",
-        "strategy"
-      ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
-      "deleted_at": null
-    },
-    {
-      "title": "The Timekeeper's Review",
-      "description": "Inspect the progress of the Time-Turner Research Unit in stabilizing safe time travel spells, addressing issues with wizards disappearing unexpectedly.",
-      "due_date": "2024-10-21",
-      "state": "Pending",
-      "priority": "Medium",
-      "time_estimation_minutes": 90,
-      "tags": [
-        "research",
-        "time travel",
-        "inspection"
-      ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
-      "deleted_at": null
-    },
-    {
-      "title": "The Feast of Alliances",
-      "description": "Host a diplomatic luncheon with the visiting delegation from the Enchanted Isles to strengthen alliances and negotiate safe exchanges of rare magical artifacts.",
-      "due_date": "2024-10-21",
-      "state": "Pending",
-      "priority": "Medium",
-      "time_estimation_minutes": 180,
-      "tags": [
-        "luncheon",
-        "alliances",
-        "diplomacy"
-      ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
-      "deleted_at": null
-    },
-    {
-      "title": "The Veela Sanctuary Decree",
-      "description": "Sign off on the relocation order for the Veela community, ensuring they have alternative sanctuary locations prepared by the Department of Magical Creatures.",
-      "due_date": "2024-10-21",
+      "title": "Convene with Auror Command",
+      "description": "Hold a closed-door session with the Auror Command to discuss the increasing threat posed by rogue magical factions and coordinate a response plan.",
+      "due_date": "2025-01-01",
       "state": "Pending",
       "priority": "High",
       "time_estimation_minutes": 60,
       "tags": [
-        "relocation",
-        "Veela",
-        "sanctuary"
+        "rogue factions",
+        "response plan",
+        "Auror Command"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     },
     {
-      "title": "The Report of Innovation",
-      "description": "Receive a progress report from the Spell Innovation Bureau on the development of new counter-curses for dark spell variants in the northern territories.",
-      "due_date": "2024-10-21",
+      "title": "Survey Time-Turner Research Progress",
+      "description": "Inspect the progress of the Time-Turner Research Unit as they work to stabilize safe time travel spells due to incidents of wizards disappearing for longer than expected.",
+      "due_date": "2025-01-01",
       "state": "Pending",
       "priority": "Medium",
-      "time_estimation_minutes": 60,
+      "time_estimation_minutes": 45,
       "tags": [
-        "magic",
-        "report",
-        "counter-curses"
+        "time travel",
+        "inspection",
+        "Time-Turner Research"
       ],
-      "created_at": "2024-10-21",
-      "modified_at": "2024-10-21",
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
+      "deleted_at": null
+    },
+    {
+      "title": "Host Luncheon with Enchanted Isles Delegation",
+      "description": "Host a diplomatic luncheon with the visiting delegation from the Enchanted Isles to strengthen alliances and negotiate the safe exchange of rare magical artifacts.",
+      "due_date": "2025-01-01",
+      "state": "Pending",
+      "priority": "Medium",
+      "time_estimation_minutes": 120,
+      "tags": [
+        "alliances",
+        "diplomatic luncheon",
+        "Enchanted Isles"
+      ],
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
+      "deleted_at": null
+    },
+    {
+      "title": "Authorize Veela Community Relocation",
+      "description": "Sign off on the relocation order for the Veela community whose habitat has been encroached upon by Muggle construction, with alternative sanctuary locations prepared by the Department of Magical Creatures.",
+      "due_date": "2025-01-01",
+      "state": "Pending",
+      "priority": "Medium",
+      "time_estimation_minutes": 30,
+      "tags": [
+        "Department of Magical Creatures",
+        "relocation",
+        "Veela community"
+      ],
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
+      "deleted_at": null
+    },
+    {
+      "title": "Gather Counter-Curse Progress Report",
+      "description": "Receive a progress report from the Spell Innovation Bureau tasked with developing new counter-curses for recent dark spell variants discovered in the northern territories.",
+      "due_date": "2025-01-01",
+      "state": "Pending",
+      "priority": "Medium",
+      "time_estimation_minutes": 30,
+      "tags": [
+        "counter-curses",
+        "Spell Innovation Bureau",
+        "dark spells"
+      ],
+      "created_at": "2025-01-01",
+      "modified_at": "2025-01-01",
       "deleted_at": null
     }
   ]
